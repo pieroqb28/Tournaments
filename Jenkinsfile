@@ -1,13 +1,9 @@
-pipeline {
-    agent any
-    triggers {
-        pollSCM '* * * * *'
+node{
+    stage('SCM CHECKOUT'){
+       
+        git 'https://github.com/pieroqb28/Tournaments'
     }
-    stages {
-        stage('Build') {
-            steps {
-                bat './mvnw spring-boot:run'
-            }
-        }
+    stage('COMPILE-PACKAGE'){
+        bat 'mvn package'
     }
 }
