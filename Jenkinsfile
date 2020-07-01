@@ -7,6 +7,6 @@ node{
         
         def mvnHome = tool name: '3.6.0', type: 'maven'
 
-        sh "${mvnHome}/bin/mvn package"
+        bat "${mvnHome}/bin/mvn package"
     }
 }
