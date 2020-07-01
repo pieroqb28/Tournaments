@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: backend
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Piero
+Implementation-Vendor-Id: pe.backend
+Build-Jdk: 1.8.0_251
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/backend
+Created-By: Maven Integration for Eclipse
+
