@@ -1,16 +1,12 @@
-pipeline {
- agent any
- stages {
-     stage("Build"){
-         steps {
-             bat "mvn -version"
-             bat "mvn clean install"
-         }
-     }
- }
- post {
-     always {
-         cleanWs()
-     }
- }
+node{
+    stage('SCM CHECKOUT'){
+       
+        git 'https://github.com/pieroqb28/Tournaments'
+    }
+    stage('COMPILE-PACKAGE'){
+        
+        def mvnHome = tool name: '3.6.0', type: 'maven'
+
+        sh "${mvn package}/bin/mvn package"
+    }
 }
